@@ -1,5 +1,6 @@
 html,
 body {
+  background-color: rgb(0, 0, 0);
   margin: 0;
   padding: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
@@ -7,7 +8,6 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #f0f0f0;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -18,4 +18,87 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+
+.background-container {
+  position: fixed;
+  bottom: 10%;
+  left: 8%;
+  right: 40%;
+  top: 28%;
+  background-image: url('back.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 15px;
+  text-align: center;
+  padding-top: 1%;
+  padding-bottom: 10%;
+}
+
+
+
+.image-container {
+  background-color: rgb(255, 255, 255);
+  position: absolute;
+  bottom: 10%;
+  left: 61%;
+  right: 8%;
+  top: 45%;
+  border-radius: 15px;
+  text-align: center;
+  padding-top: 8%;
+}
+
+.button-link {
+  bottom: 35%;
+  left: 80%;
+  transform: translateX(-50%);
+}
+
+.search-button {
+  padding: 30px 20px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+
+
+.header-container {
+  position: fixed;
+  bottom: 72%;
+  left: 0%;
+  right: 0%;
+  top: 0%;
+  text-align: center;
+  padding-top: 2%;
+}
+
+.header {
+  color: #fff;
+  font-size: 52px;
+  text-shadow: 5px 2px 5px #e1bbff80;
+}
+
+
+
+
+
+
+.background-container2 {
+  position: fixed;
+  bottom: 10%;
+  left: 30%;
+  right: 30%;
+  top: 28%;
+  background-image: url('back.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 15px;
+  text-align: center;
+  padding-top: 1%;
+  padding-bottom: 10%;
 }

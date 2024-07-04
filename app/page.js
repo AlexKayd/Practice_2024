@@ -1,13 +1,4 @@
-// import Image from "next/image";
-
-// export default function Home() {
-//   return (
-//    <h1>Главная</h1>
-//   );
-// }
-
-
-'use client';
+'use client'; 
 
 import React, { useState } from "react";
 import Link from 'next/link';
@@ -48,12 +39,21 @@ export default function Home() {
     console.log("Пароль:", loginPassword);
   };
 
+
   return (
+
     <main>
+
+      <div className="header-container">
+        <h1 className="header">Главная страница</h1>
+      </div>
+
+     <div className ="background-container">
+     <div className ="content">
       <h1>Регистрация</h1>
       <form onSubmit={handleRegisterSubmit}>
         <div>
-          <label htmlFor="register-name">Name:</label>
+          <label htmlFor="register-name">Name: </label>
           <input
             type="text"
             id="register-name"
@@ -62,22 +62,24 @@ export default function Home() {
           />
         </div>
         <div>
-          <label htmlFor="register-password">Password:</label>
+          <label htmlFor="register-password">Password: </label>
           <input
             type="password"
             id="register-password"
             value={registerPassword}
             onChange={handleRegisterPasswordChange}
           />
-        </div>
+        </div >
+        <div style={{ height: '20px' }} />
         <button type="submit">Зарегистрироваться</button>
       </form>
 
       <div style={{ height: '50px' }} />
+      
       <h1>Вход</h1>
       <form onSubmit={handleLoginSubmit}>
         <div>
-          <label htmlFor="login-name">Login:</label>
+          <label htmlFor="login-name">Login: </label>
           <input
             type="text"
             id="login-name"
@@ -86,7 +88,7 @@ export default function Home() {
           />
         </div>
         <div>
-          <label htmlFor="login-password">Password:</label>
+          <label htmlFor="login-password">Password: </label>
           <input
             type="password"
             id="login-password"
@@ -94,11 +96,18 @@ export default function Home() {
             onChange={handleLoginPasswordChange}
           />
         </div>
+        <div style={{ height: '20px' }} />
         <button type="submit">Войти</button>
       </form>
-      <Link href="/search">
-           <button>Перейти к поиску пользователей</button>
-         </Link>
+      </div>
+      </div>
+
+      <div className="image-container">
+        <Link href="/search" className="button-link">
+          <button className="search-button">Перейти к поиску пользователей</button>
+        </Link>
+      </div>
+
     </main>
   );
 }
